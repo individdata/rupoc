@@ -11,7 +11,7 @@ Two different architectures were found that we wanted to evaluate, a MyData base
 # MyData implementation
 For the MyData variant of the POC a solution from Vastuu group in Finland were chosen. Its (cloud hosted) MyData Share product offered an integrated system with a single sign on (SSO) implementation from Signicat and the possibility to log in with Swedish test BankId clients. The product also contained a Wallet where the individual could control the sharing of her/his data through consents, and the MyData Share Access Gateway AGW that were to be deployed in front of the data sources - controlling the access to the data.
 
-The following diagram gives an oversite of the implementation. 
+The following diagram gives an oversite of the architecture:
 
 ![](MyData.svg)
 
@@ -19,10 +19,9 @@ Since there were no appropriate test services that could be used we created four
 
 The Arbetsförmedlingen MinProfil application were mocked so it could show the creation of enriched CV profiles where data from the four mocked data sources could be fetched. In this case the back end mina-profiler mock service acted as a data using service from the MyData Shares point of view. The application were divided into a database backed backend and a frontend single page application for user interaction. Integration with MyData Share for login were done in the frontend code, and the backend had to be registered as a data using service and integratied with MyData Share to obtain rights to fetch and process information through the access gateways from the mock services.
 
+The mina-profiler backend were also registered as a data source offering CV profiles as data, and it's export service is fronted by an access gateway.
 
-
-
-
+Also an example Jobsite were mocked, implemented as a database backed backend and a frontend single page application. The Jobsite is registered as a data using service so the user can chose one of her/his CV profiles and make it accessible for the jobsite when applying for a job. The access of the chosen CV profile is being consented through the MyData Share Wallet, and can be tied to a specific job application and thereby available to be shown to enployer representatives.
 
 | Repository                                                                                  |
 | ------------------------------------------------------------------------------------------- |
