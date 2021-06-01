@@ -23,6 +23,20 @@ The mina-profiler backend were also registered as a data source offering CV prof
 
 Also an example Jobsite were mocked, implemented as a database backed backend and a frontend single page application. The Jobsite is registered as a data using service so the user can chose one of her/his CV profiles and make it accessible for the jobsite when applying for a job. The access of the chosen CV profile is being consented through the MyData Share Wallet, and can be tied to a specific job application and thereby available to be shown to enployer representatives.
 
+Four usage scenarions were defined that the system should implement:
+1. Editing CV Profile and import data (applicant)
+2. Job application (applicant)
+3. Check job applications (employer representative)
+4. Check job application after consent being revoked (applicant, employer representative)
+
+The creation, editing and importing of data to the CV profile is being done though the mina-profiler-spa web application.
+
+The job application scenario is initiated when the user visits the Arbetsförmedlingen Platsbanken TEST web site and the user choses to apply for a job, (that has been specifically registered as a rupoc test advert so the user is being redirected to the mocked jobsite-spa).
+
+The checking of job applications is done through the jobsite-spa webapplication.
+
+Before the last scenario the appclicant test user have to withdraw its consent, and that is being done through the Wallet.
+
 | Repository                                                                                  |
 | ------------------------------------------------------------------------------------------- |
 | [rupoc](https://github.com/individdata/rupoc)                                               |
