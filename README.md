@@ -8,8 +8,10 @@ In the POC four data points were selected, residing at four different government
 
 Two different architectures were found that we wanted to evaluate, a MyData based system where the individual could consent the usage of her/his data through a MyData Operator and its Wallet implementation, and a system based on a SOLID implementation where the individuals data were imported in a (hosted) personal data store PDS and could be shared at the users will.
 
-# My Data implementation
-To show case the MyData variant of the implementation a MyData solution were chosen from Vastuu group in Finland. Its (cloud hosted) MyData Share product offered an integrated system with single sign on (SSO) implementation from Signicat and the possibility to log in with swedish test BankId clients. 
+# MyData implementation
+To show case the MyData variant of the implementation a MyData solution were chosen from Vastuu group in Finland. Its (cloud hosted) MyData Share product offered an integrated system with single sign on (SSO) implementation from Signicat and the possibility to log in with swedish test BankId clients. The product also contained a Wallet where the individual could control the sharing of her/his data through consents, and the MyData Share Access Gateway AGW that were to be deployed in front of the data sources - controlling the access to the data.
+
+The following diagram gives an oversite of the implementation. 
 
 ![](MyData.svg)
 
