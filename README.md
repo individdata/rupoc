@@ -17,7 +17,12 @@ The following diagram gives an oversite of the implementation.
 
 Since there were no appropriate test services that could be used we created four mock services for the POC that could serve test data. One of the services, the navet mock service, are backed by a real test service at Skatteverket. (But it also had to be fronted by a mocked service since the MyData Share AGW only could front REST services and the Skatteverke test service is implemented with SOAP).
 
-The Arbetsförmedlingen MinProfil application were mocked so it could show the creation of enriched CV profiles where data from the four mocked data sources could be fetched. In this case the back end mina-profiler mock service acted as a data using service from the MyData Shares point of view.
+The Arbetsförmedlingen MinProfil application were mocked so it could show the creation of enriched CV profiles where data from the four mocked data sources could be fetched. In this case the back end mina-profiler mock service acted as a data using service from the MyData Shares point of view. The application were divided into a database backed backend and a frontend single page application for user interaction. Integration with MyData Share for login were done in the frontend code, and the backend had to be registered as a data using service and integratied with MyData Share to obtain rights to fetch and process information through the access gateways from the mock services.
+
+
+
+
+
 
 | Repository                                                                                  |
 | ------------------------------------------------------------------------------------------- |
