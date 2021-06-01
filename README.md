@@ -65,17 +65,26 @@ In the beginning of scenario 4 the applicant has to revoke her/his consent. In t
 
 
 # Repositories
-| Repository                                                                                  |
-| ------------------------------------------------------------------------------------------- |
-| [rupoc](https://github.com/individdata/rupoc)                                               |
-| [rupoc-mock-mina-profiler-spa](https://github.com/individdata/rupoc-mock-mina-profiler-spa) |
-| [rupoc-mock-mina-profiler](https://github.com/individdata/rupoc-mock-mina-profiler)         |
-| [rupoc-mock-navet](https://github.com/individdata/rupoc-mock-navet)                         |
-| [rupoc-navet-client](https://github.com/individdata/rupoc-navet-client)                     |
-| [rupoc-bankid-client](https://github.com/individdata/rupoc-bankid-client)                   |
-| [rupoc-ladok-client](https://github.com/individdata/rupoc-ladok-client)                     |
-| [rupoc-mock-ladok](https://github.com/individdata/rupoc-mock-ladok)                         |
-| [rupoc-mock-trafikverket](https://github.com/individdata/rupoc-mock-trafikverket)           |
-| [rupoc-mock-polisen](https://github.com/individdata/rupoc-mock-polisen)                     |
-| [rupoc-mock-jobsite](https://github.com/individdata/rupoc-mock-jobsite)                     |
-| [rupoc-infra](https://github.com/individdata/rupoc-infra)                                   |
+| [rupoc](https://github.com/individdata/rupoc)                                                        | this repository                                      |
+
+| Mocked services and client libraries                                                                 | Info                                                 |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| [rupoc-mock-navet](https://github.com/individdata/rupoc-mock-navet)                                  | skatteverket address information mock                |
+| [rupoc-navet-client](https://github.com/individdata/rupoc-navet-client)                              | SOAP client library to access the navet test service |
+| [rupoc-mock-ladok](https://github.com/individdata/rupoc-mock-ladok)                                  | ladok study certificates mock service                |
+| [rupoc-ladok-client](https://github.com/individdata/rupoc-ladok-client)                              | ladok mock client                                    |
+| [rupoc-mock-transportstyrelsen](https://github.com/individdata/rupoc-mock-transportstyrelsen)        | transportstyrelsen driver license mock service       | 
+| [rupoc-mock-polisen](https://github.com/individdata/rupoc-mock-polisen)                              | polisen criminal excerpt mock service                |
+
+| Mocks applications                                                                                   | Info                                                 |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| [rupoc-mock-mina-profiler-spa](https://github.com/individdata/rupoc-mock-mina-profiler-spa)          | the mina profiler mock SPA frontend application      |
+| [rupoc-mock-mina-profiler](https://github.com/individdata/rupoc-mock-mina-profiler)                  | the mina profiler mock backend application           |
+| [rupoc-mock-jobsite-spa](https://github.com/individdata/rupoc-mock-mina-profiler-spa)                | the jobsite mock SPA frontend application            |
+| [rupoc-mock-jobsite](https://github.com/individdata/rupoc-mock-jobsite)                              | the jobsite mock backend application                 |
+
+
+| Helpers                                                                                              | Info                                                 |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| [rupoc-bankid-client](https://github.com/individdata/rupoc-bankid-client)                            | a client library for stand alone BankId integration  |
+| [rupoc-infra](https://github.com/individdata/rupoc-infra)                                            | deployment scripts for OpenShift test deployment     |
