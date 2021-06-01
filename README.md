@@ -63,7 +63,7 @@ For scenario 3 the employer representative (with the hard coded WebId) logs into
 In the beginning of scenario 4 the applicant has to revoke her/his consent. In the POC SOLID implementation this is done with the POD Populator. The test user logs in to the populator and selects the (imported) CV Profile that was shared (by the jobsite-spa mock implementation in scenario 2), and revokes the consent for the employer representative to read the CV Profile. The employer representative logs into the Jobsite and tries to fetch the CV Profile for the application but is presented with an error page. (That the consent was revoked).
 
 # Branches
-The code has not been merged to the main branch but resides in the *stage* branch for the MyData variant, and the *stage-solid* branch for the SOLID implementation.
+The code has not been merged to the main branch but resides in the **stage** branch for the MyData variant, and the **stage-solid** branch for the SOLID implementation.
 
 
 # Repositories
