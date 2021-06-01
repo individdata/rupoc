@@ -4,7 +4,7 @@ POC for the assignment from the Swedish Government to Arbetsförmedlingen Jobtec
 # Case Study
 It was decided that the POC should show case a job application process where the individual could import data from some governmental agencies to enrich her/his CV-profile, and to allow an extern (private) job site to fetch that data and show it to an employer representative.
 
-In the POC four data points were selected, residing at four different government agencies. Official address information from Skatteverket, study certificates from Ladok, an excerpt from the individuals criminal record from Polisen (to be used for job applications where this is mandatory - kondergarden etc), and driver license information from Transportstyrelsen. (The criminal record excerpt was later removed from the POC due to secrecy and current legislation reasons).
+In the POC four data points were selected, residing at four different government agencies. Official address information from Skatteverket, study certificates from Ladok, an excerpt from the individuals criminal record from Polisen (to be used for job applications where this is mandatory - kindergarden etc), and driver license information from Transportstyrelsen. (The criminal record excerpt was later removed from the POC due to secrecy and current legislation reasons).
 
 Two different architectures were found that we wanted to evaluate, a MyData based system where the individual could consent the usage of her/his data through a MyData Operator and its Wallet implementation, and a system based on a SOLID implementation where the individuals data were imported in a (hosted) personal data store PDS and could be shared at the users will.
 
@@ -36,6 +36,14 @@ The job application scenario is initiated when the user visits the Arbetsförmed
 The checking of job applications is done through the jobsite-spa webapplication.
 
 Before the last scenario the appclicant test user have to withdraw its consent, and that is being done through the Wallet.
+
+# SOLID implementation
+For the SOLID version of the POC an implentation from Inrupt were chosen by their Enterprise Solid Server ESS. They offered a cloud hosted Personal Data Store PDS
+
+The following diagram gives an oversite of the architecture:
+
+![](Solid.svg)
+
 
 | Repository                                                                                  |
 | ------------------------------------------------------------------------------------------- |
