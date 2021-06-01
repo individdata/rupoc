@@ -62,6 +62,8 @@ For scenario 3 the employer representative (with the hard coded WebId) logs into
 
 In the beginning of scenario 4 the applicant has to revoke her/his consent. In the POC SOLID implementation this is done with the POD Populator. The test user logs in to the populator and selects the (imported) CV Profile that was shared (by the jobsite-spa mock implementation in scenario 2), and revokes the consent for the employer representative to read the CV Profile. The employer representative logs into the Jobsite and tries to fetch the CV Profile for the application but is presented with an error page. (That the consent was revoked).
 
+# Branches
+The code has not been merged to the main branch but resides in the *stage* branch for the MyData variant, and the *stage-solid* branch for the SOLID implementation.
 
 
 # Repositories
@@ -71,12 +73,15 @@ In the beginning of scenario 4 the applicant has to revoke her/his consent. In t
 
 | Mocked services and client libraries                                                                 | Info                                                 |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| [rupoc-navet-client](https://github.com/individdata/rupoc-navet-client)                              | SOAP client library to access the Navet test service |
 | [rupoc-mock-navet](https://github.com/individdata/rupoc-mock-navet)                                  | skatteverket address information mock                |
-| [rupoc-navet-client](https://github.com/individdata/rupoc-navet-client)                              | SOAP client library to access the navet test service |
+| [rupoc-mock-navet-client](https://github.com/individdata/rupoc-ladok-client)                         | navet mock REST client                               |
 | [rupoc-mock-ladok](https://github.com/individdata/rupoc-mock-ladok)                                  | ladok study certificates mock service                |
-| [rupoc-ladok-client](https://github.com/individdata/rupoc-ladok-client)                              | ladok mock client                                    |
+| [rupoc-mock-ladok-client](https://github.com/individdata/rupoc-ladok-client)                         | ladok mock REST client                               |
 | [rupoc-mock-transportstyrelsen](https://github.com/individdata/rupoc-mock-transportstyrelsen)        | transportstyrelsen driver license mock service       | 
+| [rupoc-mock-transportstyrelsen-client](https://github.com/individdata/rupoc-mock-transportstyrelsen-client)| transportstyrelsen mock REST client            | 
 | [rupoc-mock-polisen](https://github.com/individdata/rupoc-mock-polisen)                              | polisen criminal excerpt mock service                |
+| [rupoc-mock-polisen-client](https://github.com/individdata/rupoc-mock-polisen-client)                | polisen mock REST client                             |
 
 | Mocks applications                                                                                   | Info                                                 |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
@@ -90,3 +95,4 @@ In the beginning of scenario 4 the applicant has to revoke her/his consent. In t
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
 | [rupoc-bankid-client](https://github.com/individdata/rupoc-bankid-client)                            | a client library for stand alone BankId integration  |
 | [rupoc-infra](https://github.com/individdata/rupoc-infra)                                            | deployment scripts for OpenShift test deployment     |
+| [inrupt-pod-populator](https://github.com/individdata/inrupt-pod-populator)                          | the pod populator sample application from inrupt     |
