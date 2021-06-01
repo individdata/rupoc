@@ -42,13 +42,23 @@ For the SOLID version of the POC an implentation from Inrupt were chosen by thei
 
 Since couldn't start the implementation of the SOLID version until the end of the time frame given only a subset of the usage scenarios could be implemented. The work were thus focused to the later part of the job seeking use case, where the individual give access to her/his CV profile for an employer representative to read. The collection and importing of the users uwn data from the different government agancies were done ahead of time with a mocked import utility offered by Inrupt.
 
-Since the SOLID solution if focused around the data being stored in the POD, a considerable amount of time were spent to define the RDF structures and schema for the CV profile data and the data from the mocked data sources. This work was essentially done by Inrupt.
+Since the SOLID solution is focused around the data being stored in the POD, a considerable amount of time were spent to define the RDF structures and schema for the CV profile data and the data from the mocked data sources. This work was essentially done by Inrupt.
 
-For the integration part most of the cource code from the MyData version of the POC could be re-used, and only the jobsite-spa had to be intrgrated to the ENterprose Solid Server via client side (javascript) libraries for login and consenting.
+For the integration part most of the cource code from the MyData version of the POC could be re-used, and only the jobsite-spa had to be intrgrated to the Enterprose Solid Server via client side (javascript) libraries for login and consenting.
 
 The following diagram gives an oversite of the architecture:
 
 ![](Solid.svg)
+
+In the SOLID case three of the usage scenarions were implemented:
+1. ~~Editing CV Profile and import data (applicant)~~
+2. Job application (applicant)
+3. Check job applications (employer representative)
+4. Check job application after consent being revoked (applicant, employer representative)
+
+The BankId test login was implemented via an integrated IDP so a test applicant could go to the Arbetsförmedlingen Platsbanken TEST and apply for a test advert. After the user being redirected she/he is being prompted to log in and to give her/his consent to show the selected CV Profile for the employer representative.
+(This use case were hard coded since the implementation needed the WebID for the specific user to consent to).
+
 
 
 # Repositories
