@@ -1,5 +1,5 @@
 # rupoc
-POC for the assignment from the Swedish Government to Arbetsförmedlingen Jobtech to show-case the individuals possibility to take control of her/his own data.
+POC for the assignment from the Swedish Government to Arbetsförmedlingen Jobtech to show case the individuals possibility to take control of her/his own data.
 
 # Case Study
 It was decided that the POC should show case a job application process where the individual could import data from some governmental agencies to enrich her/his CV-profile, and to allow an extern (private) job site to fetch that data and show it to an employer representative.
@@ -9,11 +9,15 @@ In the POC four data points were selected, residing at four different government
 Two different architectures were found that we wanted to evaluate, a MyData based system where the individual could consent the usage of her/his data through a MyData Operator and its Wallet implementation, and a system based on a SOLID implementation where the individuals data were imported in a (hosted) personal data store PDS and could be shared at the users will.
 
 # MyData implementation
-To show case the MyData variant of the implementation a MyData solution were chosen from Vastuu group in Finland. Its (cloud hosted) MyData Share product offered an integrated system with single sign on (SSO) implementation from Signicat and the possibility to log in with swedish test BankId clients. The product also contained a Wallet where the individual could control the sharing of her/his data through consents, and the MyData Share Access Gateway AGW that were to be deployed in front of the data sources - controlling the access to the data.
+For the MyData variant of the POC a solution from Vastuu group in Finland were chosen. Its (cloud hosted) MyData Share product offered an integrated system with a single sign on (SSO) implementation from Signicat and the possibility to log in with Swedish test BankId clients. The product also contained a Wallet where the individual could control the sharing of her/his data through consents, and the MyData Share Access Gateway AGW that were to be deployed in front of the data sources - controlling the access to the data.
 
 The following diagram gives an oversite of the implementation. 
 
 ![](MyData.svg)
+
+Since there were no appropriate test services that could be used we created four mock services for the POC that could serve test data. One of the services, the navet mock service, are backed by a real test service at Skatteverket. (But it also had to be fronted by a mocked service since the MyData Share AGW only could front REST services and the Skatteverke test service is implemented with SOAP).
+
+The Arbetsförmedlingen MinProfil application were mocked so it could show the creation of enriched CV profiles where data from the four mocked data sources could be fetched. In this case the back end mina-profiler mock service acted as a data using service from the MyData Shares point of view.
 
 | Repository                                                                                  |
 | ------------------------------------------------------------------------------------------- |
