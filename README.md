@@ -38,13 +38,20 @@ The checking of job applications is done through the jobsite-spa webapplication.
 Before the last scenario the appclicant test user have to withdraw its consent, and that is being done through the Wallet.
 
 # SOLID implementation
-For the SOLID version of the POC an implentation from Inrupt were chosen by their Enterprise Solid Server ESS. They offered a cloud hosted Personal Data Store PDS
+For the SOLID version of the POC an implentation from Inrupt were chosen by their Enterprise Solid Server ESS. They offered a cloud hosted Personal Data Store PDS where the users data could be stored and later retrieved by parties given appropriate consent and access permissions.
+
+Since couldn't start the implementation of the SOLID version until the end of the time frame given only a subset of the usage scenarios could be implemented. The work were thus focused to the later part of the job seeking use case, where the individual give access to her/his CV profile for an employer representative to read. The collection and importing of the users uwn data from the different government agancies were done ahead of time with a mocked import utility offered by Inrupt.
+
+Since the SOLID solution if focused around the data being stored in the POD, a considerable amount of time were spent to define the RDF structures and schema for the CV profile data and the data from the mocked data sources. This work was essentially done by Inrupt.
+
+For the integration part most of the cource code from the MyData version of the POC could be re-used, and only the jobsite-spa had to be intrgrated to the ENterprose Solid Server via client side (javascript) libraries for login and consenting.
 
 The following diagram gives an oversite of the architecture:
 
 ![](Solid.svg)
 
 
+# Repositories
 | Repository                                                                                  |
 | ------------------------------------------------------------------------------------------- |
 | [rupoc](https://github.com/individdata/rupoc)                                               |
