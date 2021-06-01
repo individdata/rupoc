@@ -56,8 +56,11 @@ In the SOLID case three of the usage scenarions were implemented:
 3. Check job applications (employer representative)
 4. Check job application after consent being revoked (applicant, employer representative)
 
-The BankId test login was implemented via an integrated IDP so a test applicant could go to the Arbetsförmedlingen Platsbanken TEST and apply for a test advert. After the user being redirected she/he is being prompted to log in and to give her/his consent to show the selected CV Profile for the employer representative.
-(This use case were hard coded since the implementation needed the WebID for the specific user to consent to).
+The BankId test login was implemented via an IDP integration by Inrupt, so after the test applicant goes to the Arbetsförmedlingen Platsbanken TEST and apply for the test advert, the user is being redirected to the Jobsite where she/he is being prompted to log in and to give her/his consent to show the selected CV Profile for the employer representative. The CV profile being fetched from the users POD. (The use case were hard coded since the implementation needed the WebID for the specific user to consent to).
+
+For scenario 3 the employer representative (with the hard coded WebId) logs into the Jobsite and checks the job application for the test advert.
+
+In the beginning of scenario 4 the applicant has to revoke her/his consent. In the POC SOLID implementation this is done with the POD Populator. The test user logs in to the populator and selects the (imported) CV Profile that was shared (by the jobsite-spa mock implementation in scenario 2), and revokes the consent for the employer representative to read the CV Profile. The employer representative logs into the Jobsite and tries to fetch the CV Profile for the application but is presented with an error page. (That the consent was revoked).
 
 
 
