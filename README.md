@@ -65,6 +65,8 @@ In the beginning of scenario 4 the applicant has to revoke her/his consent. In t
 
 
 # Repositories
+| Information repository.                                                                              | Info                                                 |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
 | [rupoc](https://github.com/individdata/rupoc)                                                        | this repository                                      |
 
 | Mocked services and client libraries                                                                 | Info                                                 |
